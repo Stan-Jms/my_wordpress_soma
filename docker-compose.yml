@@ -16,8 +16,8 @@ services:
   new-site-wordpress:
     depends_on:
       - new-site-db
-    container_name: ${CONTAINER_SITE_NAME}
-    image: ${SITE_IMAGE:-wordpress}:${SITE_VERSION:-latest}
+    container_name: 'Wordpress'
+    image: https://hub.docker.com/repository/docker/stanjms/wordpress:${SITE_VERSION:-latest}
     restart: unless-stopped
     volumes:
       - ${SITE_FILES}:/var/www/html
